@@ -1,0 +1,12 @@
+{% extends "App/base.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambiara %}
+<h1><center>Resultado de busqueda - Productos</center></h1>
+
+{% for id in producto %}
+    <p>{{ id.nombre }}</p>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "App/base.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambiara %}
+<h1><center>Usuario</center></h1>
+
+<form action="{% url 'usuario' %}" method="POST"> {% csrf_token %}
+
+    <table>
+
+        {{ formulario.as_table}}
+    </table>
+
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock %}

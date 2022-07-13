@@ -1,0 +1,20 @@
+{% extends "App/base.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambiara %}
+<h1><center>Buscar Productos</center></h1>
+
+
+<form action="{% url 'buscar' %}" method="GET"> {% csrf_token %}
+    
+    <input type="text" name="nombre" id="nombre">
+   
+    <input type="submit" value="Buscar">
+
+</form>
+{% if error %}
+    <p style="color:red"> {{error}} </p>
+{% endif %}
+
+{% endblock %}
