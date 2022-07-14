@@ -16,6 +16,7 @@ Guia para navegar en nuestro proyecto.
  
  
 Creadores del proyecto:
-Coto Nicolás
-Oriana Ramirez Hernández
-González Farabollini Nicolás 
+Coto, Nicolás
+González Farabollini, Nicolás 
+Ramirez Hernández, Oriana 
+
