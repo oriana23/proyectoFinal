@@ -4,9 +4,19 @@
 
 {% block contenidoQueCambiara %}
 <h1><center>Resultado de busqueda - Productos</center></h1>
-
+<h2><p>Resultados</p></h2>
 {% for id in producto %}
+    <b>Nombre:</b>
     <p>{{ id.nombre }}</p>
+    <b>Marca:</b>
+    <p>{{ id.marca }}</p>
+    <b>Sexo:</b>
+    <p>{{ id.sexo }}</p>
+    <b>Tamaño:</b>
+    <p>{{ id.tamaño }}</p>
+    <b>Precio:</b>
+    <p>{{ id.precio }}</p>
+
 {% endfor %}
 
 {% endblock %}
