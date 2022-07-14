@@ -6,13 +6,13 @@
 <h1><center>Buscar Productos</center></h1>
 
 
-<form action="{% url 'buscar' %}" method="GET"> {% csrf_token %}
+<p><center><form action="{% url 'buscar' %}" method="GET"> {% csrf_token %}
     
     <input type="text" name="nombre" id="nombre">
    
     <input type="submit" value="Buscar">
 
-</form>
+</form></center></p>
 {% if error %}
     <p style="color:red"> {{error}} </p>
 {% endif %}

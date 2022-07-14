@@ -38,7 +38,6 @@ def producto(request):
             producto.save()
 
             return render(request, "App/inicio.html")
-
     else:
         formularioProducto= Productos()
     return render(request, "App/producto.html", {"formularioProducto":formularioProducto})
@@ -52,7 +51,7 @@ def descuento(request):
         if formularioDescuento.is_valid:
 
             informacion= formularioDescuento.cleaned_data
-            descuento= Descuento(descuento= informacion['descuento'],)
+            descuento= Promocion(descuento= informacion['descuento'], precio_final= informacion['precio_final'])
 
             descuento.save()
 
@@ -60,7 +59,7 @@ def descuento(request):
 
     else:
         formularioDescuento= Descuento()
-    return render(request, "App/producto.html", {"formularioDescuento":formularioDescuento})
+    return render(request, "App/descuento.html", {"formularioDescuento":formularioDescuento})
 
 def buscarProducto(request):
 
